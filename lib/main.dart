@@ -8,7 +8,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Flutter Login Screen Example',
-      home: Scaffold(body: Text("hey Flutter",textAlign: TextAlign.center,),));
+        title: 'Flutter Login Screen ',
+        home: Scaffold(
+          body: Text(
+            "hey Flutter",
+            textAlign: TextAlign.center,
+          ),
+        ));
   }
 }
