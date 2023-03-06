@@ -39,9 +39,9 @@ class EditNameFormPageState extends State<EditNameFormPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              SizedBox(
+              const SizedBox(
                   width: 330,
-                  child: const Text(
+                  child: Text(
                     "What's Your Name?",
                     style: TextStyle(
                       fontSize: 25,
@@ -53,7 +53,7 @@ class EditNameFormPageState extends State<EditNameFormPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                      padding: EdgeInsets.fromLTRB(0, 40, 16, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 40, 16, 0),
                       child: SizedBox(
                           height: 100,
                           width: 150,
@@ -68,11 +68,11 @@ class EditNameFormPageState extends State<EditNameFormPage> {
                               return null;
                             },
                             decoration:
-                                InputDecoration(labelText: 'First Name'),
+                                const InputDecoration(labelText: 'First Name'),
                             controller: firstNameController,
                           ))),
                   Padding(
-                      padding: EdgeInsets.fromLTRB(0, 40, 16, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 40, 16, 0),
                       child: SizedBox(
                           height: 100,
                           width: 150,
@@ -93,7 +93,7 @@ class EditNameFormPageState extends State<EditNameFormPage> {
                 ],
               ),
               Padding(
-                  padding: EdgeInsets.only(top: 150),
+                  padding: const EdgeInsets.only(top: 150),
                   child: Align(
                       alignment: Alignment.bottomCenter,
                       child: SizedBox(
@@ -105,9 +105,8 @@ class EditNameFormPageState extends State<EditNameFormPage> {
                             if (_formKey.currentState!.validate() &&
                                 isAlpha(firstNameController.text +
                                     secondNameController.text)) {
-                              updateUserValue(firstNameController.text +
-                                  " " +
-                                  secondNameController.text);
+                              updateUserValue(
+                                  "${firstNameController.text} ${secondNameController.text}");
                               Navigator.pop(context);
                             }
                           },

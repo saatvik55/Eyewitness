@@ -38,6 +38,7 @@ class EditEmailFormPageState extends State<EditEmailFormPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
+                // ignore: prefer_const_constructors
                 SizedBox(
                     width: 320,
                     child: const Text(
@@ -47,7 +48,7 @@ class EditEmailFormPageState extends State<EditEmailFormPage> {
                       textAlign: TextAlign.left,
                     )),
                 Padding(
-                    padding: EdgeInsets.only(top: 40),
+                    padding: const EdgeInsets.only(top: 40),
                     child: SizedBox(
                         height: 100,
                         width: 320,
@@ -64,7 +65,7 @@ class EditEmailFormPageState extends State<EditEmailFormPage> {
                           controller: emailController,
                         ))),
                 Padding(
-                    padding: EdgeInsets.only(top: 150),
+                    padding: const EdgeInsets.only(top: 150),
                     child: Align(
                         alignment: Alignment.bottomCenter,
                         child: SizedBox(

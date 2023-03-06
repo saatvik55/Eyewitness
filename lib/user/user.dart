@@ -22,11 +22,11 @@ class User {
     String? about,
   }) =>
       User(
-        image: imagePath ?? this.image,
+        image: imagePath ?? image,
         name: name ?? this.name,
         email: email ?? this.email,
         phone: phone ?? this.phone,
-        aboutMeDescription: about ?? this.aboutMeDescription,
+        aboutMeDescription: about ?? aboutMeDescription,
       );
 
   static User fromJson(Map<String, dynamic> json) => User(

@@ -3,7 +3,7 @@ import 'package:myflutterproject/pages/profile_page.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 
   // Handles Status and Nav bar styling/theme
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -14,6 +14,8 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   // ignore: library_private_types_in_public_api
   _MyAppState createState() => _MyAppState();
@@ -30,7 +32,7 @@ class _MyAppState extends State<MyApp> {
           fontFamily: 'Roboto',
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              primary: Colors.black,
+              backgroundColor: Colors.black,
               shadowColor: Colors.grey,
               elevation: 20,
               shape: const RoundedRectangleBorder(
@@ -48,7 +50,7 @@ class _MyAppState extends State<MyApp> {
           textButtonTheme: TextButtonThemeData(
             style: TextButton.styleFrom(
               alignment: Alignment.centerLeft,
-              primary: Colors.black,
+              foregroundColor: Colors.black,
             ),
           )),
       home: const ProfilePage(),

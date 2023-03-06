@@ -37,6 +37,7 @@ class _EditDescriptionFormPageState extends State<EditDescriptionFormPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
+                // ignore: prefer_const_constructors
                 SizedBox(
                     width: 350,
                     child: const Text(
@@ -45,7 +46,7 @@ class _EditDescriptionFormPageState extends State<EditDescriptionFormPage> {
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     )),
                 Padding(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     child: SizedBox(
                         height: 250,
                         width: 350,
@@ -70,7 +71,7 @@ class _EditDescriptionFormPageState extends State<EditDescriptionFormPage> {
                                   'Write a little bit about yourself. Do you like chatting? Are you a smoker? Do you bring pets with you? Etc.'),
                         ))),
                 Padding(
-                    padding: EdgeInsets.only(top: 50),
+                    padding: const EdgeInsets.only(top: 50),
                     child: Align(
                         alignment: Alignment.bottomCenter,
                         child: SizedBox(
