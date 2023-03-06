@@ -34,16 +34,18 @@ class _ProfilePageState extends State<ProfilePage> {
             toolbarHeight: 10,
           ),
           const Center(
-              child: Padding(
-                  padding: EdgeInsets.only(bottom: 20),
-                  child: Text(
-                    'Edit Profile',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                      color: Color.fromRGBO(64, 105, 225, 1),
-                    ),
-                  ))),
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 40),
+              child: Text(
+                'Edit Profile',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: Color.fromRGBO(64, 105, 225, 1),
+                ),
+              ),
+            ),
+          ),
           InkWell(
               onTap: () {
                 navigateSecondPage(const EditImagePage());
@@ -68,7 +70,7 @@ class _ProfilePageState extends State<ProfilePage> {
   // Widget builds the display item with the proper formatting to display the user's info
   Widget buildUserInfoDisplay(String getValue, String title, Widget editPage) =>
       Padding(
-          padding: const EdgeInsets.only(bottom: 10),
+          padding: const EdgeInsets.only(bottom: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -128,7 +130,7 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(height: 1),
           Container(
               width: 350,
-              height: 200,
+              height: 150,
               decoration: const BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
