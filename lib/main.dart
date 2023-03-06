@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        title: 'Flutter Login Screen ',
+        title: 'Login Page ',
         home: Scaffold(
           body: Text(
             "hey Flutter",
