@@ -5,6 +5,11 @@ import './screens/authScreen.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:myflutterproject/pages/profile_page.dart';
+import 'package:flutter/services.dart';
+
+void main() {
+  runApp(const MyApp());
 
 void main() async {
 WidgetsFlutterBinding.ensureInitialized();
@@ -15,9 +20,15 @@ print("Initialized App $app");
 runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  // ignore: library_private_types_in_public_api
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     
