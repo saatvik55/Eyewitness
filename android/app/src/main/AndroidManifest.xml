@@ -4,6 +4,7 @@
    <application
         android:label="projectreactor"
         android:icon="@mipmap/ic_launcher"
+        android:name="${applicationName}"
        tools:ignore="MissingClass">
         <activity
             android:name=".MainActivity"
