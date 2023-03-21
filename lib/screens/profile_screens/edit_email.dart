@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myflutterproject/user/user_data.dart';
-import 'package:myflutterproject/widgets/appbar_widget.dart';
+import 'package:myflutterproject/provider/user/user_data.dart';
+import 'package:myflutterproject/provider/user/appbar_widget.dart';
 import 'package:email_validator/email_validator.dart';
 
 // This class handles the Page to edit the Email Section of the User Profile.
@@ -86,8 +86,12 @@ class EditEmailFormPageState extends State<EditEmailFormPage> {
                               style: TextStyle(fontSize: 15),
                             ),
                           ),
-                        )))
-              ]),
-        ));
+                        )
+                        )
+                        )
+              ]
+              ),
+        )
+        );
   }
 }

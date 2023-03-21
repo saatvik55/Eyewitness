@@ -33,16 +33,14 @@ dependencies:
   provider: ^6.0.4  
   intl: ^0.17.0
   http: ^0.13.5
-  shared_preferences: ^2.0.15
-  image_picker: ^0.8.6+1
-  path_provider: ^2.0.12
   path: ^1.8.2
   sqflite: ^2.2.4+1
   location: ^4.2.0
   cloud_firestore: ^4.3.1
   firebase_core: ^2.5.0
   firebase_auth: ^4.2.6 
-  firebase_storage: ^11.0.13 
+  firebase_storage: ^11.0.13
+
 
 
   # The following adds the Cupertino Icons font to your application.
