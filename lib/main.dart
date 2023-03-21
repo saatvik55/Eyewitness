@@ -5,11 +5,8 @@ import './screens/authScreen.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:myflutterproject/pages/profile_page.dart';
+import 'package:myflutterproject/screens/profile_screens/profile_page.dart';
 import 'package:flutter/services.dart';
-
-void main() {
-  runApp(const MyApp());
 
 void main() async {
 WidgetsFlutterBinding.ensureInitialized();
@@ -53,7 +50,7 @@ class _MyAppState extends State<MyApp> {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, userSnapshot) {
           if(userSnapshot.hasData)
-          return NewScreen();
+          return ProfilePage();
           else
           return AuthScreen();
         }, 

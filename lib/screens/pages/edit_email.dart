@@ -1,34 +1,31 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:string_validator/string_validator.dart';
-import 'package:myflutterproject/user/user_data.dart';
-import 'package:myflutterproject/widgets/appbar_widget.dart';
+import 'package:myflutterproject/provider/user/user_data.dart';
+import 'package:myflutterproject/provider/user/appbar_widget.dart';
+import 'package:email_validator/email_validator.dart';
 
-// This class handles the Page to edit the Phone Section of the User Profile.
-class EditPhoneFormPage extends StatefulWidget {
-  const EditPhoneFormPage({Key? key}) : super(key: key);
+// This class handles the Page to edit the Email Section of the User Profile.
+class EditEmailFormPage extends StatefulWidget {
+  const EditEmailFormPage({Key? key}) : super(key: key);
+
   @override
-  EditPhoneFormPageState createState() {
-    return EditPhoneFormPageState();
+  EditEmailFormPageState createState() {
+    return EditEmailFormPageState();
   }
 }
 
-class EditPhoneFormPageState extends State<EditPhoneFormPage> {
+class EditEmailFormPageState extends State<EditEmailFormPage> {
   final _formKey = GlobalKey<FormState>();
-  final phoneController = TextEditingController();
+  final emailController = TextEditingController();
   var user = UserData.myUser;
 
   @override
   void dispose() {
-    phoneController.dispose();
+    emailController.dispose();
     super.dispose();
   }
 
-  void updateUserValue(String phone) {
-    String formattedPhoneNumber =
-        "(+${phone.substring(0, 2)}) ${phone.substring(2, 7)}-${phone.substring(7, phone.length)}";
-    user.phone = formattedPhoneNumber;
+  void updateUserValue(String email) {
+    user.email = email;
   }
 
   @override
@@ -41,15 +38,17 @@ class EditPhoneFormPageState extends State<EditPhoneFormPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
+                // ignore: prefer_const_constructors
                 SizedBox(
                     width: 320,
                     child: const Text(
-                      "What's Your Phone Number?",
+                      "What's your email?",
                       style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.left,
                     )),
                 Padding(
-                    padding: EdgeInsets.only(top: 40),
+                    padding: const EdgeInsets.only(top: 40),
                     child: SizedBox(
                         height: 100,
                         width: 320,
@@ -57,21 +56,16 @@ class EditPhoneFormPageState extends State<EditPhoneFormPage> {
                           // Handles Form Validation
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Please enter your phone number';
-                            } else if (isAlpha(value)) {
-                              return 'Only Numbers Please';
-                            } else if (value.length < 10) {
-                              return 'Please enter a VALID phone number';
+                              return 'Please enter your email.';
                             }
                             return null;
                           },
-                          controller: phoneController,
                           decoration: const InputDecoration(
-                            labelText: 'Your Phone Number',
-                          ),
+                              labelText: 'Your email address'),
+                          controller: emailController,
                         ))),
                 Padding(
-                    padding: EdgeInsets.only(top: 150),
+                    padding: const EdgeInsets.only(top: 150),
                     child: Align(
                         alignment: Alignment.bottomCenter,
                         child: SizedBox(
@@ -81,8 +75,9 @@ class EditPhoneFormPageState extends State<EditPhoneFormPage> {
                             onPressed: () {
                               // Validate returns true if the form is valid, or false otherwise.
                               if (_formKey.currentState!.validate() &&
-                                  isNumeric(phoneController.text)) {
-                                updateUserValue(phoneController.text);
+                                  EmailValidator.validate(
+                                      emailController.text)) {
+                                updateUserValue(emailController.text);
                                 Navigator.pop(context);
                               }
                             },
@@ -91,8 +86,12 @@ class EditPhoneFormPageState extends State<EditPhoneFormPage> {
                               style: TextStyle(fontSize: 15),
                             ),
                           ),
-                        )))
-              ]),
-        ));
+                        )
+                        )
+                        )
+              ]
+              ),
+        )
+        );
   }
 }
