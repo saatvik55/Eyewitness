@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myflutterproject/user/user_data.dart';
-import 'package:myflutterproject/widgets/appbar_widget.dart';
+import 'package:myflutterproject/provider/user/user_data.dart';
+import 'package:myflutterproject/provider/user/appbar_widget.dart';
 
 // This class handles the Page to edit the About Me Section of the User Profile.
 class EditDescriptionFormPage extends StatefulWidget {
