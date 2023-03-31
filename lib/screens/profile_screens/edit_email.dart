@@ -46,7 +46,8 @@ class EditEmailFormPageState extends State<EditEmailFormPage> {
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.left,
-                    )),
+                    )
+                    ),
                 Padding(
                     padding: const EdgeInsets.only(top: 40),
                     child: SizedBox(
