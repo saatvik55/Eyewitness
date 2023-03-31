@@ -1,4 +1,4 @@
-![Eyewitness App Logo](https://github.com/saatvik55/myflutterproject/blob/saatvik/images/Screenshot%202023-03-27%20183036.png)
+<img src="https://github.com/saatvik55/myflutterproject/blob/saatvik/images/Screenshot%202023-03-27%20183036.png" alt="app icon" style="width:200px; heigth:200px;"/>
 
 # Eyewitness App
 
