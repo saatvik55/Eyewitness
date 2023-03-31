@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 class DisplayImage extends StatelessWidget {
@@ -25,7 +24,9 @@ class DisplayImage extends StatelessWidget {
         top: 10,
         child: buildEditIcon(color),
       )
-    ]));
+    ]
+    )
+    );
   }
 
   // Builds Profile Image
@@ -57,11 +58,13 @@ class DisplayImage extends StatelessWidget {
   Widget buildCircle({
     required Widget child,
     required double all,
-  }) =>
+  }
+  ) =>
       ClipOval(
           child: Container(
         padding: EdgeInsets.all(all),
         color: Colors.white,
         child: child,
-      ));
+      )
+      );
 }
