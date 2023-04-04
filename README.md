@@ -38,7 +38,7 @@ To use the app, open it on your mobile device and follow the prompts to report a
 
 ## Contributions
 
-We are a team of three undergrad students but we welcome contributions to the Eyewitness App from developers and other interested parties. 
+We are a team of four undergrad students but we welcome contributions to the Eyewitness App from developers and other interested parties. 
 
 ## License
 
